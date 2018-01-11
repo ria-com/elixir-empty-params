@@ -22,7 +22,7 @@ defmodule EmptyParams do
       |> Map.put(:params,
         map.params
         |> Map.to_list
-        |> Enum.filter(fn({k,v})-> k && v && k != :"" && v != "" && v != "" && v != [] && v != [""] && v != %{"0": ""} && v != %{"0" => ""} end)
+        |> Enum.filter(fn({k,v})-> k && v && k != :"" && v != "" && v != "" && v != [] && v != [""] && v != %{"0": ""} && v != %{"0" => ""} && v != %{"0": "0"} && v != %{"0" => "0"} end)
         |> Map.new
       )
   end
